@@ -144,16 +144,6 @@
         object-fit: cover; 
         filter: grayscale(100%);
     }
-
-    .about:nth-of-type(odd) .about-img{
-    -webkit-mask-image:linear-gradient(to top, transparent 0%, #000 30%, #000 70%, transparent 100%);
-            mask-image:linear-gradient(to top, transparent 0%, #000 30%, #000 70%, transparent 100%);
-    }
-
-    .about:nth-of-type(even) .about-img{
-    -webkit-mask-image:linear-gradient(to top, transparent 0%, #000 30%, #000 70%, transparent 100%);
-            mask-image:linear-gradient(to top, transparent 0%, #000 30%, #000 70%, transparent 100%);
-    }
     
     .about-content {
         width: 100%;
