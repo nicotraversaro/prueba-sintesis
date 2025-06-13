@@ -1,0 +1,131 @@
+:root{
+    --ring-size: clamp(120px, 30vw, 200px);
+}
+
+.counter-container {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(#000, #151515, #1b1a1a, #1e1d1d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.counter-title-container {
+    height: clamp(80px, 20vh, 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-title {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 2.6rem; 
+    font-weight: 600;
+    text-align: center;
+    margin: 10px;
+}
+
+.circles-container {
+    display: flex;
+    justify-content: center;
+    height: 75%;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: var(--ring-size);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* transition: transform 0.5s; */
+}
+
+/* .skill:hover {
+    transform: translate(0 ,-20px);
+} */
+
+.outer{
+    position: relative;
+    height: var(--ring-size);
+    width: var(--ring-size);
+    border-radius: 50%;
+    padding: calc(var(--ring-size) * 0.15);
+    box-shadow:
+        6px 6px 10px 10px rgba(0, 0, 0, 0.753),
+        -6px -6px 10px -1px rgba(60,60,60,.6);
+    background:#171717;
+    flex-shrink: 0;
+}
+
+.inner{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: #171717;
+    box-shadow:
+        inset 4px 4px 6px -1px rgba(0,0,0,.75),          
+        inset -4px -4px 6px -1px rgba(60,60,60,.5),      
+        -.5px -.5px 0 rgba(60,60,60,.35),
+        .5px  .5px 0 rgba(0,0,0,.8),
+        0 12px 10px -10px rgba(0,0,0,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    color: #EEE;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.05em;
+    font-size: calc(var(--ring-size) * 0.28);
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 30px;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.svg-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.counter-text {
+    color: #EEE;
+    margin-top: 2rem;
+    font-family: 'Montserrat';
+    font-size: clamp(1rem, 2.6vw, 1.4rem);
+    font-weight: 700;
+    text-align: center;
+    min-width: var(--ring-size);
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    :root{
+        --ring-size: clamp(110px, 30vw, 180px);
+    }
+}
+
+@media (min-width: 1440px) {
+    :root{
+        --ring-size: clamp(120px, 30vw, 220px);
+    }
+
+    .counter-title {
+        font-size: clamp(1.5rem, 5vw, 3rem); 
+    }
+}
+
